@@ -12,9 +12,18 @@
 		<li id="w3">Python Tutorial</li>
 	</ul>
 	<script type="text/javascript">
- 		$("#w1").prepend($("#w1").index()+1+" ");
+ 		/*$("#w1").prepend($("#w1").index()+1+" ");
 		$("#w2").prepend($("#w2").index()+1+" ");
-		$("#w3").prepend($("#w3").index()+1+" ");
+		$("#w3").prepend($("#w3").index()+1+" ");*/
+		$(document).ready(function()
+			{
+				var counter=1;
+				while(counter<=$("li").size())
+				{
+					$("li:nth-child("+counter+")").prepend('<b>'+counter+'</b> ');
+					counter++;
+				};
+			});
 	</script>
 </body>
 </html>
