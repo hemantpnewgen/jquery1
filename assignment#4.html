@@ -8,8 +8,12 @@
 <body>
 	<a href="www.yahoo.com" >YAHOO</a>
 	<script type="text/javascript">
-		$("a").attr("href", "www.google.com");
-		$("a").text("GOOGLE");
+		function change()
+		{
+			$("a").attr("href", "www.google.com");
+			$("a").text("GOOGLE");
+		}
 	</script>
+	<button onclick="change()">Change</button>
 </body>
 </html>
